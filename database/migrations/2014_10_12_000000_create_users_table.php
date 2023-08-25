@@ -18,7 +18,8 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('phone')->nullable();
-            $table->foreign('role_id')->nullable()->references('id')->on('roles');
+            // $table->foreign('role_id')->nullable()->references('id')->on('roles');
+            $table->foreignId('role_id')->nullable()->constrained('roles')->onUpdate('cascade')->onDelete('cascade');
             $table->boolean('is_active')->default(false);
             $table->string('type');
             $table->string('department')->nullable();
