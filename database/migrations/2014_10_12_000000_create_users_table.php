@@ -32,20 +32,20 @@ class CreateUsersTable extends Migration
             $table->timestamps();
         });
 
-        DB::table('users')->insert(
-            array(
-                'name' => 'Admin',
-                'email' => 'admin@admin.com',
-                'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
-                'type' => 'admin',
-                'phone' => '09000000000',
-                'role_id' => 1,
-                'is_active' => 1,
-                'email_verified_at' => date_create('now')->format('Y-m-d H:i:s'),
-                'created_at' => date_create('now')->format('Y-m-d H:i:s'),
-                'updated_at' => date_create('now')->format('Y-m-d H:i:s'),
-            )
-        );
+        // DB::table('users')->insert(
+        //     array(
+        //         'name' => 'Admin',
+        //         'email' => 'admin@admin.com',
+        //         'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+        //         'type' => 'admin',
+        //         'phone' => '09000000000',
+        //         'role_id' => 1,
+        //         'is_active' => 1,
+        //         'email_verified_at' => date_create('now')->format('Y-m-d H:i:s'),
+        //         'created_at' => date_create('now')->format('Y-m-d H:i:s'),
+        //         'updated_at' => date_create('now')->format('Y-m-d H:i:s'),
+        //     )
+        // );
     }
 
     /**
