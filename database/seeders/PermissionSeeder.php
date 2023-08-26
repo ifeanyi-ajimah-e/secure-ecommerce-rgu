@@ -35,7 +35,7 @@ class PermissionSeeder extends Seeder
             'description' => 'Manage Product Categories'
         ]);
         DB::table('permissions')->insert([
-            'name' => 'Manage Product Categories',
+            'name' => 'View Product Categories',
             'description' => 'View Product Categories'
         ]);
         DB::table('permissions')->insert([
