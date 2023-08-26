@@ -28,7 +28,7 @@ class UserSeeder extends Seeder
             'type' => 'admin',
             'department' => 'Admin Department',
             'job_description' => 'This is the office of the Super Admin',
-            'is_otp_verified' => 0,
+            'is_otp_verified' => 1,
             'verification_token' => Str::random(10),
             'email_verified_at' => now(),
             'password' => Hash::make($password),
