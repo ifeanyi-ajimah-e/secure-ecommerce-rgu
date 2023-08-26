@@ -1,16 +1,27 @@
 <div class="offcanvas-menu-wrapper">
     <div class="offcanvas__option">
         <div class="offcanvas__links">
-            <a href="#">Sign in</a>
-            <a href="#">FAQs</a>
+            @guest
+            <a href="{{ url('login')}}"> Sign in</a>
+            <a href="{{ url('sign-up')}}"> Sign Up </a>
+            @endguest
         </div>
         <div class="offcanvas__top__hover">
-            <span>Usd <i class="arrow_carrot-down"></i></span>
+            @auth  
+            <span> {{ Auth::user()->name }} <i class="arrow_carrot-down"></i></span>
             <ul>
-                <li>USD</li>
-                <li>EUR</li>
-                <li>USD</li>
+                <li>
+                    <a class="" href="{{ route('customer-logout') }}"
+                        onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                        <i class="fa fa-sign-out"></i> {{ __('Logout') }}
+                    </a>
+                    <form id="logout-form" action="{{ route('customer-logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+                </li>
             </ul>
+            @endauth
         </div>
     </div>
     <div class="offcanvas__nav__option">

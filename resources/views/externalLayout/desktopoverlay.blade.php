@@ -10,7 +10,7 @@
                 <div class="header__top__right">
                     <div class="header__top__links">
                         @guest
-                        <a href="{{ url('user-login')}}">Sign in</a>
+                        <a href="{{ url('login')}}">Sign in</a>
                         <a href="{{ url('sign-up')}}"> Sign Up </a>
                         @endguest
                     </div>
